@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>ServletPages_PreparedStatement</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+  
+  
+  
+     
+   <!-- For Student information submission -->
+   
+    <servlet>
+  
+ 		 <servlet-name>InsertStudent</servlet-name>
+ 		 <servlet-class>com.sapours.crud_controller.InsertStudent</servlet-class>
+  
+  	</servlet>
+  
+  	<servlet-mapping>
+  
+ 		 <servlet-name>InsertStudent</servlet-name>
+  		 <url-pattern>/insertStudent</url-pattern>
+  
+  	</servlet-mapping>  
+   
+   <!-- For Student Login page -->
+   
+    <servlet>
+  
+		  <servlet-name>dataStudent</servlet-name>
+ 		  <servlet-class>com.sapours.crud_login.StudentLogin</servlet-class>
+  
+  	</servlet>
+  
+  	<servlet-mapping>
+  
+ 		  <servlet-name>dataStudent</servlet-name>
+  		  <url-pattern>/loginPage</url-pattern>
+  
+ 	</servlet-mapping>
+ 	
+ 	 <!-- For Administration Login page -->
+   
+    <servlet>
+  
+		  <servlet-name>Administration</servlet-name>
+ 		  <servlet-class>com.sapours.crud_login.AdminLogin</servlet-class>
+  
+  	</servlet>
+  
+  	<servlet-mapping>
+  
+ 		  <servlet-name>Administration</servlet-name>
+  		  <url-pattern>/adminLoginPage</url-pattern>
+  
+ 	</servlet-mapping>
+ 	
+ 	 	 <!-- For Student Approved Database Login page -->
+   
+    <servlet>
+  
+		  <servlet-name>Student Approved Database</servlet-name>
+ 		  <servlet-class>com.sapours.crud_controller.ApproveDatabaseStudent</servlet-class>
+  
+  	</servlet>
+  
+  	<servlet-mapping>
+  
+ 		  <servlet-name>Student Approved Database</servlet-name>
+  		  <url-pattern>/approveStudentDatabase</url-pattern>
+  
+ 	</servlet-mapping>
+ 	
+ 	
+ 	
+ 	<!-- For Invalid Page -->
+ 	 <servlet>
+  
+		  <servlet-name>invalidCredentialPage</servlet-name>
+ 		  <servlet-class>com.sapours.validation.InvalidPage_ReLoginPage</servlet-class>
+  
+  	</servlet>
+  
+  	<servlet-mapping>
+  
+ 		  <servlet-name>invalidCredentialPage</servlet-name>
+  		  <url-pattern>/invalidPage</url-pattern>
+  
+ 	</servlet-mapping>
+ 	
+ 	
+ 	<!-- For displaying data -->
+ 	
+ 	 <servlet>  
+        <servlet-name>displayData</servlet-name>  
+        <servlet-class>com.sapours.crud_controller.DisplayStudent</servlet-class>  
+    </servlet>  
+  
+    <servlet-mapping>  
+        <servlet-name>displayData</servlet-name>  
+        <url-pattern>/displayPage</url-pattern>  
+    </servlet-mapping>  
+    
+    	<!-- For UPDATE data -->
+ 	
+ 	 <servlet>  
+        <servlet-name>UpdateData</servlet-name>  
+        <servlet-class>com.sapours.crud_controller.UpdateStudent</servlet-class>  
+    </servlet>  
+  
+    <servlet-mapping>  
+        <servlet-name>UpdateData</servlet-name>  
+        <url-pattern>/updateStudent</url-pattern>  
+    </servlet-mapping> 
+    
+    
+       
+    	<!-- For DELETE data -->
+ 	
+ 	 <servlet>  
+        <servlet-name>DELETEData</servlet-name>  
+        <servlet-class>com.sapours.crud_controller.DeleteStudentById</servlet-class>  
+    </servlet>  
+  
+    <servlet-mapping>  
+        <servlet-name>DELETEData</servlet-name>  
+        <url-pattern>/deleteStudent</url-pattern>  
+    </servlet-mapping> 
+ 	
+ 	
+</web-app>
